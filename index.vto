@@ -7,38 +7,67 @@ links:
       url: https://www.linkedin.com/in/taylor-stigen/
 ---
 
-<div class="container text-center">
+<div>
     <header>
-        <h1>{{ title }}</h1>
+        
     </header>
-    <p>Hello, my name is Taylor Stigen, welcome to my portfolio.</p>
 
-    <h2>About Me</h2>
-    <img src="/images/Taylor1.webp" alt="A picture of Taylor Stigen" class="img-fluid rounded-4 border border-3" style="max-width: 250px;">
-    <p>I am an aspiring web developer located in Saskatoon, Saskatchewan.</p>
-    <p>The current technologies that I enjoy learning and working with are:</p>
-
-    <div class="row justify-content-center mx-auto" style="max-width: 450px">
-        {{ for tech of currenttech }}
-            {{ comp.technology({ title: tech.title, img: tech.img, desc: tech.desc }) }}
-        {{ /for }}
+    <div class="container">
+        <h1 class="display-1">{{ title }}</h1>
+        <h2 class="display-3">About Me</h2>
+        <hr class="border border-info">
+        <div class="row align-items-center">
+            <div class="p-2 col-lg-3 col-md-4 col-sm-12 d-flex">
+                <img src="/images/Taylor1.webp" alt="A picture of Taylor Stigen" class="img-fluid rounded-4 border border-primary border-3" style="max-width: 250px; width: 100%;">
+            </div>
+            <h3 class="p-2 col-lg-9 col-md-8 col-sm-12 text-center">
+                Hello, my name is Taylor Stigen, welcome to my portfolio.
+                I am an aspiring web developer located in Saskatoon, Saskatchewan.
+            </h3>
+        </div>
     </div>
 
-    <p>Other technologies I have used:</p>
 
-    <div class="row justify-content-center mx-auto" style="max-width: 450px">
-        {{ for tech of othertech }}
-            {{ comp.technology({ title: tech.title, img: tech.img, desc: tech.desc }) }}
-        {{ /for }}
+    <div class="container">
+        <h2>The current technologies that I enjoy learning and working with are:</h2>
+
+        <div class="row justify-content-center mx-auto">
+            {{ for tech of currenttech }}
+                {{ comp.technology({ title: tech.title, img: tech.img, desc: tech.desc }) }}
+            {{ /for }}
+        </div>
     </div>
 
-    <h2>Projects</h2>
-    <p><a class="btn btn-primary" href="https://github.com/TaylorStigen/taylorstigen.dev">This Website</a></p>
+    <div class="container">
+        <h2>Other technologies I have used:</h2>
 
-    <h2>Contact</h2>
-    {{ for link of links }}
-        <p><a href="{{ link.url }}">
-            {{ link.text }}
-        </a></p>
-    {{ /for }}
+        <div class="row justify-content-center mx-auto">
+            {{ for tech of othertech }}
+                {{ comp.technology({ title: tech.title, img: tech.img, desc: tech.desc }) }}
+            {{ /for }}
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="display-3">Projects</h2>
+        <hr class="border border-info">
+        <a class="btn btn-primary" href="https://github.com/TaylorStigen/taylorstigen.dev">This Website</a>
+    </div>
+
+    <div class="container">
+        <h2 class="display-3">Contact</h2>
+        <hr class="border border-info">
+        <div class="row align-items-center mb-3">
+            {{ for link of links }}
+            <div class="col-auto d-flex align-items-center">
+                <span class="me-2" style="width: 24px; height: 24px;">
+                    {{ link.text |> toLowerCase |> simpleicons }}
+                </span>
+                <a href="{{ link.url }}">
+                    {{ link.text }}
+                </a>
+            </div>
+            {{ /for }}
+        </div>
+    </div>
 </div>

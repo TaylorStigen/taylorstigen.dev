@@ -1,0 +1,56 @@
+// Custom color variables
+$pampas: #f9f5ec; // Background for light designs
+$martini: #d1c9b7; // Light accent
+$flamingo: #f65129; // Primary brand color
+$pale-oyster: #e8c9b0; // Dark accent
+$balitic-sea: #201e26; // Dark shades
+
+// Bootstrap color variables
+$primary: $flamingo; // Primary
+$info: $pampas; // Info
+$success: #7f9344; // Success
+$warning: #fc830c; // Warning
+$danger: #f44336; // Danger
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/bootstrap";
+
+body {
+    background-color: $balitic-sea;
+    color: $pampas;
+    font-family: "Ubuntu Condensed", sans-serif;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     color: $flamingo; // Use your main brand color for headings
+// }
+
+.martini {
+    background-color: $martini;
+    color: $balitic-sea;
+}
+
+.pampas {
+    background-color: $pampas;
+    color: $balitic-sea;
+}
+
+.baltic-sea {
+    background-color: $balitic-sea;
+    color: $pampas;
+}
+
+svg {
+    fill: $pampas;
+    max-width: 30px;
+}
+
+ul {
+    background-color: $balitic-sea;
+}
