@@ -11,7 +11,7 @@ site.data("currentDate", new Date().getFullYear());
 site.use(sass());
 site.use(terser());
 site.use(svgo());
-site.copy([".webp"]);
+site.copy([".webp", ".png", ".ico"]);
 site.use(simpleIcons());
 
 export default site;
