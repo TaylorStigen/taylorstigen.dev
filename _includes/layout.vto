@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,17 +9,28 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="taylorstigen" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
-    <link href="styles/sass.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
     <title>{{ title }}</title>
   </head>
-  <body>
+  <body class="is-preload">
     {{ content }}
-    <script src="js/bootstrap.bundle.js"></script>
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li><a href="https://github.com/TaylorStigen" class="icon brands fa-github"><span class="label">Github</span></a></li>
+          <li><a href="https://www.linkedin.com/in/taylor-stigen/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+          <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Taylor Stigen {{ currentDate }}</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
-  <footer class="text-center">
-    &copy; Taylor Stigen {{ currentDate }}
-  </footer>
 </html>
